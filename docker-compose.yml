@@ -1,11 +1,7 @@
-version: '3.8'
-
 services:
   portfolio:
     build: .
     container_name: ritwik-portfolio
     ports:
       - "80:80"
-    environment:
-      - NODE_ENV=production
     restart: unless-stopped

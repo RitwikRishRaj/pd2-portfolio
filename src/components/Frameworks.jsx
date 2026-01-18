@@ -1,4 +1,5 @@
 import { OrbitingCircles } from "./OrbitingCircles";
+import PropTypes from "prop-types";
 
 export function Frameworks() {
   const skills = [
@@ -38,3 +39,7 @@ export function Frameworks() {
 const Icon = ({ src }) => (
   <img src={src} className="duration-200 rounded-sm hover:scale-110" />
 );
+
+Icon.propTypes = {
+  src: PropTypes.string.isRequired,
+};

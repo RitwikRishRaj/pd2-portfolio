@@ -1,6 +1,8 @@
 import { twMerge } from "tailwind-merge";
 import Marquee from "../components/Marquee";
 import { reviews } from "../constants";
+import PropTypes from "prop-types";
+
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
@@ -29,6 +31,13 @@ const ReviewCard = ({ img, name, username, body }) => {
       <blockquote className="mt-2 text-sm">{body}</blockquote>
     </figure>
   );
+};
+
+ReviewCard.propTypes = {
+  img: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
 };
 
 export default function Testimonial() {
